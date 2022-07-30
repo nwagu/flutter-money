@@ -272,7 +272,7 @@ Are you curious about the changes that occur in each version? [See here for deta
 | ---- | ----- |
 | Fadhly Permata | [https://github.com/fadhly-permata](https://github.com/fadhly-permata) |
 | Gerrel | [https://github.com/Gerrel](https://github.com/Gerrel) |
-| Gerrel | [https://github.com/nwagu](https://github.com/nwagu) |
+| Chukwuemeka Nwagu | [https://github.com/nwagu](https://github.com/nwagu) |
 | ...you... | ...your link... |
 
 
