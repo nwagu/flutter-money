@@ -1,11 +1,11 @@
-#import "FlutterMoneyFormatterPlugin.h"
+#import "FlutterMoneyPlugin.h"
 
-@implementation FlutterMoneyFormatterPlugin
+@implementation FlutterMoneyPlugin
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
   FlutterMethodChannel* channel = [FlutterMethodChannel
-      methodChannelWithName:@"flutter_money_formatter"
+      methodChannelWithName:@"flutter_money"
             binaryMessenger:[registrar messenger]];
-  FlutterMoneyFormatterPlugin* instance = [[FlutterMoneyFormatterPlugin alloc] init];
+  FlutterMoneyPlugin* instance = [[FlutterMoneyPlugin alloc] init];
   [registrar addMethodCallDelegate:instance channel:channel];
 }
 

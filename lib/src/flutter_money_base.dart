@@ -53,7 +53,7 @@ class FlutterMoney {
   /// Init instance of [FlutterMoney]
   ///
   /// [amount] (@required) the number that will be formatted
-  FlutterMoney({this.amount = 0, this.settings}) {
+  FlutterMoney({this.amount = 0, MoneyFormatterSettings? settings}) {
     this.settings = settings ?? MoneyFormatterSettings();
     output = _getOutput();
     comparator = MoneyFormatterCompare(amount: this.amount);
@@ -63,30 +63,30 @@ class FlutterMoney {
   double amount;
 
   /// The formatter settings
-  MoneyFormatterSettings? settings;
+  late MoneyFormatterSettings settings;
 
   /// Returns compiled and formatted output in several formats.
-  MoneyFormatterOutput? output;
+  late MoneyFormatterOutput output;
 
   /// Comparator
-  MoneyFormatterCompare? comparator;
+  late MoneyFormatterCompare comparator;
 
   /// output builder
   MoneyFormatterOutput _getOutput() {
-    _utilities = _Utilities(amount: this.amount, settings: this.settings!);
+    _utilities = _Utilities(amount: this.amount, settings: this.settings);
 
     String _urs = _utilities!.refineSeparator;
-    int _decSepCharPos = _urs.indexOf(this.settings!.decimalSeparator);
+    int _decSepCharPos = _urs.indexOf(this.settings.decimalSeparator);
 
     return MoneyFormatterOutput(
         nonSymbol: _urs,
-        symbolOnLeft: '${this.settings!.symbol}${_utilities!.spacer}$_urs',
-        symbolOnRight: '$_urs${_utilities!.spacer}${this.settings!.symbol}',
+        symbolOnLeft: '${this.settings.symbol}${_utilities!.spacer}$_urs',
+        symbolOnRight: '$_urs${_utilities!.spacer}${this.settings.symbol}',
         compactNonSymbol: _compactNonSymbol,
         compactSymbolOnLeft:
-            '${this.settings!.symbol}${_utilities!.spacer}$_compactNonSymbol',
+            '${this.settings.symbol}${_utilities!.spacer}$_compactNonSymbol',
         compactSymbolOnRight:
-            '$_compactNonSymbol${_utilities!.spacer}${this.settings!.symbol}',
+            '$_compactNonSymbol${_utilities!.spacer}${this.settings.symbol}',
         fractionDigitsOnly:
             _urs.substring((-1 == _decSepCharPos ? 0 : _decSepCharPos + 1)),
         withoutFractionDigits: _urs.substring(
@@ -140,13 +140,13 @@ class FlutterMoney {
     MoneyFormatterSettings? ts = this.settings;
 
     MoneyFormatterSettings mfs = MoneyFormatterSettings(
-        symbol: symbol ?? ts!.symbol,
-        thousandSeparator: thousandSeparator ?? ts!.thousandSeparator,
-        decimalSeparator: decimalSeparator ?? ts!.decimalSeparator,
+        symbol: symbol ?? ts.symbol,
+        thousandSeparator: thousandSeparator ?? ts.thousandSeparator,
+        decimalSeparator: decimalSeparator ?? ts.decimalSeparator,
         symbolAndNumberSeparator:
-            symbolAndNumberSeparator ?? ts!.symbolAndNumberSeparator,
-        fractionDigits: fractionDigits ?? ts!.fractionDigits,
-        compactFormatType: compactFormatType ?? ts!.compactFormatType);
+            symbolAndNumberSeparator ?? ts.symbolAndNumberSeparator,
+        fractionDigits: fractionDigits ?? ts.fractionDigits,
+        compactFormatType: compactFormatType ?? ts.compactFormatType);
 
     return FlutterMoney(amount: amount ?? this.amount, settings: mfs);
   }
@@ -166,7 +166,7 @@ class FlutterMoney {
     String reformat = NumberFormat.currency(
             symbol: '',
             decimalDigits:
-                numerics.indexOf('.') == -1 ? 0 : this.settings!.fractionDigits)
+                numerics.indexOf('.') == -1 ? 0 : this.settings.fractionDigits)
         .format(num.parse(numerics));
 
     return '$reformat$alphas';

@@ -12,10 +12,6 @@ This project is based on [FlutterMoneyFormatter](https://github.com/fadhly-perma
 #### Dependencies :
 [![intl](https://img.shields.io/pub/vpre/intl.svg?label=intl&colorA=gray&colorB=green&style=plastic)](https://pub.dartlang.org/packages/intl)
 
-
-### Screenshot
-![screenshot](doc/fmf.gif)
-
 ---
 
 
@@ -68,7 +64,7 @@ If you will use the output format several times, I strongly recommend that you i
 MoneyFormatterOutput fo = fm.output;
 ```
 
-Or directly when initializing the `FlutterMoneyFormatter` instance as in the following example:
+Or directly when initializing the `FlutterMoney` instance as in the following example:
 
 ```dart
 MoneyFormatterOutput fo = FlutterMoney(
@@ -192,7 +188,7 @@ print(fm.comparator.isGreaterThan(comparerValue)); // true
 
 ## FastCalc
 
-`fastCalc` is a function that can be used to perform various fast calculation processes that you might need. In implementing it, the `fastCalc` function gives the output of a` FlutterMoneyFormatter` instance so you can perform several calculation functions at once with the chaining method.
+`fastCalc` is a function that can be used to perform various fast calculation processes that you might need. In implementing it, the `fastCalc` function gives the output of a` FlutterMoney` instance so you can perform several calculation functions at once with the chaining method.
 
 **Function**:
 
@@ -303,5 +299,5 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 The views and conclusions contained in the software and documentation are those
 of the authors and should not be interpreted as representing official policies,
-either expressed or implied, of the 'FlutterMoneyFormatter' project.
+either expressed or implied, of the 'FlutterMoney' project.
 ```
