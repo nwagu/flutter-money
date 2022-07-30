@@ -1,5 +1,7 @@
 # FlutterMoney
 
+This project is based on FlutterMoneyFormatter. The original readme is reproduced below
+
 
 > `FlutterMoneyFormatter` is a [Flutter](https://flutter.io) extension to formatting various types of currencies according to the characteristics you like, without having to be tied to any localization.
 >
