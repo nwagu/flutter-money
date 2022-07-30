@@ -1,6 +1,6 @@
 name: flutter_money
 description: Money formatter for Flutter!
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/nwagu/flutter_money
 
 environment:
