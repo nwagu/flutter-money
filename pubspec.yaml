@@ -1,10 +1,11 @@
 name: flutter_money
-description: FlutterMoney fixes issues in the flutter_money_formatter package
-version: 0.0.1
+description: Money formatter for Flutter!
+version: 0.0.2
 homepage: https://github.com/nwagu/flutter_money
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
+  flutter: ">=1.20.0"
 
 dependencies:
   flutter:

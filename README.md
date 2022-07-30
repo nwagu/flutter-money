@@ -1,13 +1,13 @@
 # FlutterMoney
 
-This project is based on FlutterMoneyFormatter. The original readme is reproduced below
+This project is based on [https://github.com/fadhly-permata/flutter_money_formatter](FlutterMoneyFormatter). The original README is recreated below
 
 
 > `FlutterMoneyFormatter` is a [Flutter](https://flutter.io) extension to formatting various types of currencies according to the characteristics you like, without having to be tied to any localization.
 >
-> [![latest version](https://img.shields.io/pub/v/flutter_money_formatter.svg?style=plastic&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAQAAAC1QeVaAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfjAg8HMDMbfsHaAAABSUlEQVQY0y2LsUvUYRyHn+/7fe2uVMIz4hcnin+BFCrdZq1BQ1MN4VJxY7MoRLg7OGQ0NPkfiIOYBbYpiUO0VSQ15UFxHHf8fu/7cTif9XkeEz/54TO5qX4xtmJP8mZ8vR+vpt/q4gU3QitP3Iwr9fdhyerhPjZ7cBZH9Rf75ldSp11tXKsnZYHlEDvrt9dO4/dkjwjF6tde43M5GjGBlGoxrNtainGOsef9RqsMIyfUEZg8V1pVslf+crL3dup6EW6ZOMMRGEbmnmqh07bpkLEB89xhgMFQo8dRy4AZMGAe+EINkAEp2B6QhvHw7nOJ+9Fuq2guNsvKDaNiBvGLkUTQuf8Pd3e6U+MLKnGAkmkyf8xN/+zAeuFBKt+FZ6qGmux+tP3xw0TFGz7ZoffRlqQkSSolvRCK8Skmz9lpE3lIl0CiUfUix34BalOOAMgIffsAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTktMDItMTVUMDc6NDg6NTEtMDU6MDCMNC56AAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE5LTAyLTE1VDA3OjQ4OjUxLTA1OjAw/WmWxgAAAABJRU5ErkJggg==)](https://pub.dartlang.org/packages/flutter_money_formatter)
-> [![last commit](https://img.shields.io/github/last-commit/fadhly-permata/flutter_money_formatter.svg?logo=github&style=plastic)](https://github.com/fadhly-permata/flutter_money_formatter)
-> [![License](https://img.shields.io/badge/license-BSD-blue.svg?style=plastic&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACPVBMVEXLy9UAAADLy9Tn7ubo7+bh5+Lb397b397i6OLc4N/f4+Df5ODc4N/i5+Li5+Lk6ePj6ePf4uAAAFbo7ubn7uU5F3re4eDw9+ru9unk6uTu9unOztbLy9XQ0NfMzNXKydTLytXLytTKydPMzNXPz9fNzdbIyNPY29zZ3N3Z3N3Y29zb397b397Y29zZ3N3Z3N3Y29zIyNPNzdW/vM3Y29zc4N/c4N/c4N/c4N/c4N/c4N/c4N/c39/c4N/X29zAvM3b397c4N/b397b3t7b397b397b39/b397b3t7b39/c4N/b397b39/b397b39/a3t7c4N/c4N/a3t7b397b397b39/b39/b39/b39/b397b4N7b39/b397b39/b39/b397c4N/b397b397b397c4N/U19vb4N7b39/U1tvc4N/b397b397b397c4N/c4N/c4N/b397b4N7b39/b39/c4N/c4N/a3d7b397b397b397a3d7b4N7b39/a3d7b397b397b397a3d7T1NnU1trQ0dfb4N7b39/Q0dfU1trT1NnQ0dfT1NnR09jT1drT1drb4N7b39/T1trU1trR09jT1dnQ0NfNztbR0tjb397c4N/c4N/c4N/c4N/c4N/b39/NztbHx9LPz9fNzdXP0Nfb397b397b397b397b397b397b397b397FxNHJydTOztbPz9fMzNXNzdbOztbOztbLy9XLy9XNzdXMzNXPz9fc4N/c4N/c4N/c4N/c4N////9bn80kAAAAuXRSTlMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMEAQAAAQQDBAQRGBYQZ2cQFhgRBAQCC9T7+vr///r71AsCI+pwN0Hg4EE3cOsjlE+PBdbVBY5PlVxvZWfa2WdlcFvKXVFYwAjU0wjAWFFdy7D7sNfXsfuwC3u7gxDX1hCDu3sLAwAE1tUEAAMECAYGCNPSCAYGCAQDBqrv/f3x/MsEAwQEBmihl5OTmJ98AwQEAwQEAQAAAAMEAzPoO4QAAAABYktHRL6k3IPDAAAAB3RJTUUH4wIPByY17oXROAAAAN1JREFUCNcB0gAt/wAdHh8AIAEBAQEhAiIjJAAlJicoKSorLC0uLzAxMgAzNDU2Nzg5Ojs3PD0+PwADQEFCQ0RFRkdISUpLBAAFTE1OTwZQUQdSU1RVCABWVwlYWQpaWwtcXQxeXwBgYWJjZGVmZ2hpamtsbQBuuW+6cA1xcg5zu3S8dQB2d3h5eg97fBB9fn+AgQCCEYMShBOFhhSHFYgWiQCKi4yNjhePkBiRkpOUlQCWlxmYvZmam5ydnp+goQCioxqkpaanqKmqq6ytrgCvsLGyG7MBAbQctba3uPQxRmBOIi5hAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE5LTAyLTE1VDA3OjM4OjUzLTA1OjAwMpAq0AAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOS0wMi0xNVQwNzozODo1My0wNTowMEPNkmwAAAAASUVORK5CYII=)](https://raw.githubusercontent.com/fadhly-permata/flutter_money_formatter/master/LICENSE)
+> [![latest version](https://img.shields.io/pub/v/flutter_money.svg?style=plastic&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAQAAAC1QeVaAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfjAg8HMDMbfsHaAAABSUlEQVQY0y2LsUvUYRyHn+/7fe2uVMIz4hcnin+BFCrdZq1BQ1MN4VJxY7MoRLg7OGQ0NPkfiIOYBbYpiUO0VSQ15UFxHHf8fu/7cTif9XkeEz/54TO5qX4xtmJP8mZ8vR+vpt/q4gU3QitP3Iwr9fdhyerhPjZ7cBZH9Rf75ldSp11tXKsnZYHlEDvrt9dO4/dkjwjF6tde43M5GjGBlGoxrNtainGOsef9RqsMIyfUEZg8V1pVslf+crL3dup6EW6ZOMMRGEbmnmqh07bpkLEB89xhgMFQo8dRy4AZMGAe+EINkAEp2B6QhvHw7nOJ+9Fuq2guNsvKDaNiBvGLkUTQuf8Pd3e6U+MLKnGAkmkyf8xN/+zAeuFBKt+FZ6qGmux+tP3xw0TFGz7ZoffRlqQkSSolvRCK8Skmz9lpE3lIl0CiUfUix34BalOOAMgIffsAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTktMDItMTVUMDc6NDg6NTEtMDU6MDCMNC56AAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE5LTAyLTE1VDA3OjQ4OjUxLTA1OjAw/WmWxgAAAABJRU5ErkJggg==)](https://pub.dartlang.org/packages/flutter_money)
+> [![last commit](https://img.shields.io/github/last-commit/nwagu/flutter_money.svg?logo=github&style=plastic)](https://github.com/nwagu/flutter_money)
+> [![License](https://img.shields.io/badge/license-BSD-blue.svg?style=plastic&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACPVBMVEXLy9UAAADLy9Tn7ubo7+bh5+Lb397b397i6OLc4N/f4+Df5ODc4N/i5+Li5+Lk6ePj6ePf4uAAAFbo7ubn7uU5F3re4eDw9+ru9unk6uTu9unOztbLy9XQ0NfMzNXKydTLytXLytTKydPMzNXPz9fNzdbIyNPY29zZ3N3Z3N3Y29zb397b397Y29zZ3N3Z3N3Y29zIyNPNzdW/vM3Y29zc4N/c4N/c4N/c4N/c4N/c4N/c4N/c39/c4N/X29zAvM3b397c4N/b397b3t7b397b397b39/b397b3t7b39/c4N/b397b39/b397b39/a3t7c4N/c4N/a3t7b397b397b39/b39/b39/b39/b397b4N7b39/b397b39/b39/b397c4N/b397b397b397c4N/U19vb4N7b39/U1tvc4N/b397b397b397c4N/c4N/c4N/b397b4N7b39/b39/c4N/c4N/a3d7b397b397b397a3d7b4N7b39/a3d7b397b397b397a3d7T1NnU1trQ0dfb4N7b39/Q0dfU1trT1NnQ0dfT1NnR09jT1drT1drb4N7b39/T1trU1trR09jT1dnQ0NfNztbR0tjb397c4N/c4N/c4N/c4N/c4N/b39/NztbHx9LPz9fNzdXP0Nfb397b397b397b397b397b397b397b397FxNHJydTOztbPz9fMzNXNzdbOztbOztbLy9XLy9XNzdXMzNXPz9fc4N/c4N/c4N/c4N/c4N////9bn80kAAAAuXRSTlMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMEAQAAAQQDBAQRGBYQZ2cQFhgRBAQCC9T7+vr///r71AsCI+pwN0Hg4EE3cOsjlE+PBdbVBY5PlVxvZWfa2WdlcFvKXVFYwAjU0wjAWFFdy7D7sNfXsfuwC3u7gxDX1hCDu3sLAwAE1tUEAAMECAYGCNPSCAYGCAQDBqrv/f3x/MsEAwQEBmihl5OTmJ98AwQEAwQEAQAAAAMEAzPoO4QAAAABYktHRL6k3IPDAAAAB3RJTUUH4wIPByY17oXROAAAAN1JREFUCNcB0gAt/wAdHh8AIAEBAQEhAiIjJAAlJicoKSorLC0uLzAxMgAzNDU2Nzg5Ojs3PD0+PwADQEFCQ0RFRkdISUpLBAAFTE1OTwZQUQdSU1RVCABWVwlYWQpaWwtcXQxeXwBgYWJjZGVmZ2hpamtsbQBuuW+6cA1xcg5zu3S8dQB2d3h5eg97fBB9fn+AgQCCEYMShBOFhhSHFYgWiQCKi4yNjhePkBiRkpOUlQCWlxmYvZmam5ydnp+goQCioxqkpaanqKmqq6ytrgCvsLGyG7MBAbQctba3uPQxRmBOIi5hAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE5LTAyLTE1VDA3OjM4OjUzLTA1OjAwMpAq0AAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOS0wMi0xNVQwNzozODo1My0wNTowMEPNkmwAAAAASUVORK5CYII=)](https://raw.githubusercontent.com/nwagu/flutter_money/master/LICENSE)
 
 #### Dependencies :
 [![intl](https://img.shields.io/pub/vpre/intl.svg?label=intl&colorA=gray&colorB=green&style=plastic)](https://pub.dartlang.org/packages/intl)
@@ -21,7 +21,7 @@ This project is based on FlutterMoneyFormatter. The original readme is reproduce
 
 ## Install
 
-For complete steps in installing `FlutterMoneyFormatter` you can see in the [**Installation Guide**](https://pub.dartlang.org/packages/flutter_money_formatter#-installing-tab-).
+For complete steps in installing `FlutterMoney` you can see in the [**Installation Guide**](https://pub.dartlang.org/packages/flutter_money_formatter#-installing-tab-).
 
 
 ## Usage
@@ -29,7 +29,7 @@ For complete steps in installing `FlutterMoneyFormatter` you can see in the [**I
 Import the library
 
 ```dart
-import 'package:flutter_money_formatter/flutter_money_formatter.dart';
+import 'package:flutter_money/flutter_money.dart';
 ```
 
 
@@ -39,7 +39,7 @@ To be able to format your `double` value into the various formats you want, you 
 
 
 ```dart
-FlutterMoneyFormatter fmf = FlutterMoneyFormatter(
+FlutterMoney fm = FlutterMoney(
     amount: 12345678.9012345
 );
 ```
@@ -50,28 +50,28 @@ After that, you can request various results of the format as follows:
 
 ```dart
 // normal form
-print(fmf.output.nonSymbol); // 12,345,678.90
-print(fmf.output.symbolOnLeft); // $ 12,345,678.90
-print(fmf.output.symbolOnRight); // 12,345,678.90 $
-print(fmf.output.fractionDigitsOnly); // 90
-print(fmf.output.withoutFractionDigits); // 12,345,678
+print(fm.output.nonSymbol); // 12,345,678.90
+print(fm.output.symbolOnLeft); // $ 12,345,678.90
+print(fm.output.symbolOnRight); // 12,345,678.90 $
+print(fm.output.fractionDigitsOnly); // 90
+print(fm.output.withoutFractionDigits); // 12,345,678
 
 // compact form
-print(fmf.output.compactNonSymbol) // 12.3M
-print(fmf.output.compactSymbolOnLeft) // $ 12.3M
-print(fmf.output.compactSymbolOnRight) // 12.3M $
+print(fm.output.compactNonSymbol) // 12.3M
+print(fm.output.compactSymbolOnLeft) // $ 12.3M
+print(fm.output.compactSymbolOnRight) // 12.3M $
 ```
 
 If you will use the output format several times, I strongly recommend that you initialize a variable as in the following example:
 
 ```dart
-MoneyFormatterOutput fo = fmf.output;
+MoneyFormatterOutput fo = fm.output;
 ```
 
 Or directly when initializing the `FlutterMoneyFormatter` instance as in the following example:
 
 ```dart
-MoneyFormatterOutput fo = FlutterMoneyFormatter(
+MoneyFormatterOutput fo = FlutterMoney(
     amount: 12345678.9012345
 ).output;
 ```
@@ -99,7 +99,7 @@ See [demo section](#demo) to get more info.
 To adjust the format to suit your needs, you can set it through the `settings` parameter:
 
 ```dart
-FlutterMoneyFormatter fmf = new FlutterMoneyFormatter(
+FlutterMoney fm = new FlutterMoney(
     amount: 12345678.9012345,
     settings: MoneyFormatterSettings(
         symbol: 'IDR',
@@ -118,7 +118,7 @@ Of course you are not required to initialize the entire configuration in the `se
 
 ## Properties, Methods, and Functions
 
-- ## `FlutterMoneyFormatter`
+- ## `FlutterMoney`
 
 | Property Names    | Data Type                 | Descriptions |
 | ----------------- | ------------------------- | ------------ |
@@ -126,8 +126,8 @@ Of course you are not required to initialize the entire configuration in the `se
 | `settings`        | `MoneyFormatterSettings`  | [See here.](#MoneyFormatterSettings) |
 | `output`          | `MoneyFormatterOutput`    | [See here.](#MoneyFormatterOutput) |
 | `comparator`      | `MoneyFormatterCompare`   | [See here.](#MoneyFormatterCompare) |
-| `copyWith`        | `FlutterMoneyFormatter`   | [see here](#duplicating-instance) |
-| `fastCalc`        | `FlutterMoneyFormatter`   | [see here](#FastCalc) |
+| `copyWith`        | `FlutterMoney`            | [see here](#duplicating-instance) |
+| `fastCalc`        | `FlutterMoney         `   | [see here](#FastCalc) |
 
 
 - ## `MoneyFormatterSettings`
@@ -180,11 +180,11 @@ You can use formats that match your needs through properties found in the `Money
 Example of using a comparator:
 
 ```dart
-FlutterMoneyFormatter fmf = FlutterMoneyFormatter(amount: 12345678.9012345);
+FlutterMoney fm = FlutterMoney(amount: 12345678.9012345);
 double comparerValue = 5678.9012;
 
-print(fmf.comparator.isEqual(comparerValue)); // false
-print(fmf.comparator.isGreaterThan(comparerValue)); // true
+print(fm.comparator.isEqual(comparerValue)); // false
+print(fm.comparator.isGreaterThan(comparerValue)); // true
 
 ```
 
@@ -197,7 +197,7 @@ print(fmf.comparator.isGreaterThan(comparerValue)); // true
 **Function**:
 
 ```dart
-FlutterMoneyFormatter fastCalc({
+FlutterMoney fastCalc({
     @required FastCalcType type, 
     @required double amount
 })
@@ -206,21 +206,21 @@ FlutterMoneyFormatter fastCalc({
 **Implementation**:
 
 ```dart
-FlutterMoneyFormatter fmf = FlutterMoneyFormatter(amount: 12345.678);
-fmf.fastCalc(type: FastCalcType.addition, amount: 1.111);
-fmf.fastCalc(type: FastCalcType.substraction, amount: 2.222);
+FlutterMoney fm = FlutterMoney(amount: 12345.678);
+fm.fastCalc(type: FastCalcType.addition, amount: 1.111);
+fm.fastCalc(type: FastCalcType.substraction, amount: 2.222);
 
-print(fmf.output.nonSymbol); // 12,345.68
+print(fm.output.nonSymbol); // 12,345.68
 ```
 
 Because it supports the chaining process, the example above can be shortened as follows:
 
 ```dart
-FlutterMoneyFormatter fmf = FlutterMoneyFormatter(amount: 12345.678)
+FlutterMoney fm = FlutterMoney(amount: 12345.678)
     .fastCalc(type: FastCalcType.addition, amount: 1.111)
     .fastCalc(type: FastCalcType.substraction, amount: 2.222);
 
-print(fmf.output.nonSymbol);  // 12,345.68
+print(fm.output.nonSymbol);  // 12,345.68
 ```
 
 The `type` parameter used by the `fastCalc` function has the `FastCalcType` data type which is an enum. The following table is an explanation for the `FastCalcType` enum:
@@ -242,17 +242,17 @@ The `type` parameter used by the `fastCalc` function has the `FastCalcType` data
 For some reasons, you may need to duplicate the `instance` and just need to change some configurations. To do that, you can use the `copyWith` method as below:
 
 ```dart
-FlutterMoneyFormatter fmf = FlutterMoneyFormatter(amount: 12345678.9012345);
+FlutterMoney fm = FlutterMoney(amount: 12345678.9012345);
 
-print(fmf.output.symbolOnLeft); // $ 12,345,678.90
-print(fmf.copyWith(symbol: 'IDR', symbolAndNumberSeparator: '-').output.symbolOnLeft); // IDR-12,345,678.90
+print(fm.output.symbolOnLeft); // $ 12,345,678.90
+print(fm.copyWith(symbol: 'IDR', symbolAndNumberSeparator: '-').output.symbolOnLeft); // IDR-12,345,678.90
 ```
 
 ---
 
 ## Demo
 
-For more complete samples, you can grab it from the [example directory](https://github.com/fadhly-permata/flutter_money_formatter/tree/master/example).
+For more complete samples, you can grab it from the [example directory](https://github.com/nwagu/flutter_money/tree/master/example).
 
 ## Our Other Package
 
@@ -260,11 +260,11 @@ See our [other packages here](https://pub.dartlang.org/flutter/packages?q=email%
 
 ## Help Me
 
-If you find some issues or bugs, please [report here.](https://github.com/fadhly-permata/flutter_money_formatter/issues/new?assignees=&labels=&template=bug_report.md&title=) You can also help in [requesting new features here.](https://github.com/fadhly-permata/flutter_money_formatter/issues/new?assignees=&labels=&template=feature_request.md&title=)
+If you find some issues or bugs, please [report here.](https://github.com/nwagu/flutter_money/issues/new?assignees=&labels=&template=bug_report.md&title=) You can also help in [requesting new features here.](https://github.com/nwagu/flutter_money/issues/new?assignees=&labels=&template=feature_request.md&title=)
 
 ## ChangeLog
 
-Are you curious about the changes that occur in each version? [See here for detailed informations](https://pub.dartlang.org/packages/flutter_money_formatter#-changelog-tab-).
+Are you curious about the changes that occur in each version? [See here for detailed informations](https://pub.dartlang.org/packages/flutter_money#-changelog-tab-).
 
 
 ## Contributors
@@ -272,6 +272,7 @@ Are you curious about the changes that occur in each version? [See here for deta
 | ---- | ----- |
 | Fadhly Permata | [https://github.com/fadhly-permata](https://github.com/fadhly-permata) |
 | Gerrel | [https://github.com/Gerrel](https://github.com/Gerrel) |
+| Gerrel | [https://github.com/nwagu](https://github.com/nwagu) |
 | ...you... | ...your link... |
 
 
